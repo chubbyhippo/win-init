@@ -1,2 +1,4 @@
 # run powershell as admin
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+```
+Set-ExecutionPolicy Bypass -Scope Process
+```
