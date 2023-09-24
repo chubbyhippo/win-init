@@ -4,3 +4,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install git -y
 # refresh
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
+
+git clone https://github.com/LeDragoX/Win-Debloat-Tools.git
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force; ls -Recurse *.ps*1 | Unblock-File; .\Win-Debloat-Tools\"WinDebloatTools.ps1" 'CLI'
