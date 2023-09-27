@@ -9,7 +9,6 @@ choco install autohotkey -y
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
 git clone https://github.com/chubbyhippo/ahk.git $Home\ahk
-git clone 
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.lnk")
 $Shortcut.TargetPath = "$Home\ahk\CapsToChangeInputLanguage.ahk"
