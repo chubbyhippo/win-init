@@ -1,12 +1,8 @@
 Set-WinUserLanguageList en-US,th-TH -Force
 #Install-PackageProvider -Name NuGet -Force
-# install choco
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-# install programs
-choco install git -y
-choco install autohotkey -y
-# refresh
-$Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
+# install git
+winget install -e --id -h --accept-package-agreements --accept-source-agreements Git.Git
+
 
 git clone https://github.com/chubbyhippo/ahk.git $Home\ahk
 $WshShell = New-Object -comObject WScript.Shell
@@ -14,5 +10,15 @@ $Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\St
 $Shortcut.TargetPath = "$Home\ahk\CapsToChangeInputLanguage.ahk"
 $Shortcut.Save()
 
+# debloat
 git clone https://github.com/Raphire/Win11Debloat.git
 Set-ExecutionPolicy Unrestricted -Scope Process -Force; .\Win11Debloat\"Win11Debloat.ps1" -Silent -RunDefaults -RemoveW11Outlook -ClearStart -ShowHiddenFolders
+
+
+# install choco
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+# install programs
+#choco install git -y
+#choco install autohotkey -y
+# refresh
+$Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
