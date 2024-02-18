@@ -1,7 +1,7 @@
 Set-WinUserLanguageList en-US,th-TH -Force
 #Install-PackageProvider -Name NuGet -Force
 # install git
-winget install -e --id -h --accept-package-agreements --accept-source-agreements Git.Git
+winget install -e -h --accept-package-agreements --accept-source-agreements --id Git.Git
 
 
 git clone https://github.com/chubbyhippo/ahk.git $Home\ahk
