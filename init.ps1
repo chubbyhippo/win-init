@@ -15,4 +15,4 @@ $Shortcut.TargetPath = "$Home\ahk\CapsToChangeInputLanguage.ahk"
 $Shortcut.Save()
 
 git clone https://github.com/Raphire/Win11Debloat.git
-Set-ExecutionPolicy Unrestricted -Scope Process -Force; .\Win11Debloat\"Win11Debloat.ps1" -RemoveApps -Silent
+Set-ExecutionPolicy Unrestricted -Scope Process -Force; .\Win11Debloat\"Win11Debloat.ps1" -RemoveApps -Silent -ClearStart
