@@ -3,7 +3,8 @@ Set-WinUserLanguageList en-US,th-TH -Force
 # install git
 winget install -e -h --accept-package-agreements --accept-source-agreements --id Git.Git
 
-
+# install autohotkey
+winget install -e -h Autohotkey.Autohotkey
 git clone https://github.com/chubbyhippo/ahk.git $Home\ahk
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.lnk")
