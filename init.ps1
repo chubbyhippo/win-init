@@ -1,7 +1,7 @@
 Set-WinUserLanguageList en-US,th-TH -Force
 #Install-PackageProvider -Name NuGet -Force
 # install git
-winget install -e -h --accept-package-agreements --accept-source-agreements --id Git.Git
+winget install --id Git.Git -e -h --accept-package-agreements --accept-source-agreements
 
 # install autohotkey
 winget install -e -h Autohotkey.Autohotkey
