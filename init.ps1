@@ -6,9 +6,12 @@ winget install -e -h --accept-package-agreements --accept-source-agreements --id
 # install autohotkey
 winget install -e -h Autohotkey.Autohotkey
 git clone https://github.com/chubbyhippo/ahk.git $Home\ahk
+$WebClient=New-Object Net.WebClient
+$Uri='https://raw.githubusercontent.com/chubbyhippo/ahk/master/CapsToChangeInputLanguage.ahk'
+$WebClient.DownloadFile($Uri, "$Home\CapsToChangeInputLanguage.ahk")
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.lnk")
-$Shortcut.TargetPath = "$Home\ahk\CapsToChangeInputLanguage.ahk"
+$Shortcut.TargetPath = "$Home\CapsToChangeInputLanguage.ahk"
 $Shortcut.Save()
 
 # debloat
