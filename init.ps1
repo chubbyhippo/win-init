@@ -21,4 +21,4 @@ $Shortcut.Save()
 
 # debloat
 git clone https://github.com/Raphire/Win11Debloat.git "$Home\Win11Debloat"
-Set-ExecutionPolicy Unrestricted -Scope Process -Force; ".$Home\Win11Debloat\Win11Debloat.ps1" -Silent -RunDefaults -RemoveW11Outlook -ClearStart -ShowHiddenFolders
+Set-ExecutionPolicy Unrestricted -Scope Process -Force; "$Home\Win11Debloat\Win11Debloat.ps1" -Silent -RunDefaults -RemoveW11Outlook -ClearStart -ShowHiddenFolders
