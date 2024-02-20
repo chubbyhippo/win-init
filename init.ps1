@@ -11,7 +11,6 @@ $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
 # install autohotkey
 #winget install -e -h Autohotkey.Autohotkey
-git clone https://github.com/chubbyhippo/ahk.git $Home\ahk
 $WebClient=New-Object Net.WebClient
 $Uri='https://raw.githubusercontent.com/chubbyhippo/windows/main/CapsToChangeInputLanguage.ahk'
 $WebClient.DownloadFile($Uri, "$Home\CapsToChangeInputLanguage.ahk")
