@@ -1,5 +1,4 @@
 Set-WinUserLanguageList en-US,th-TH -Force
-#Install-PackageProvider -Name NuGet -Force
 # install git
 #winget install --id Git.Git -e -h --accept-package-agreements --accept-source-agreements
 # install choco
