@@ -22,6 +22,6 @@ $Shortcut.Save()
 # debloat
 git clone https://github.com/Raphire/Win11Debloat.git
 Set-ExecutionPolicy Unrestricted -Scope Process -Force; .\Win11Debloat\"Win11Debloat.ps1" -Silent -RunDefaults -RemoveW11Outlook -ClearStart -ShowHiddenFolders
-
-
-
+# clean up
+rm -fo -r "$Home\downloads\windows-main.zip"
+rm -fo -r "$Home\windows-main"
