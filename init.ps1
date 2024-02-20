@@ -1,23 +1,23 @@
-Invoke-Expression Set-WinUserLanguageList en-US,th-TH -Force
+Set-WinUserLanguageList en-US,th-TH -Force
 # install git
 #winget install --id Git.Git -e -h --accept-package-agreements --accept-source-agreements
 # install choco
-Invoke-Expression Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # install programs
-Invoke-Expression choco install git -y
-Invoke-Expression choco install autohotkey -y
+Invoke-Expressionchoco install git -y
+Invoke-Expressionchoco install autohotkey -y
 # refresh
-Invoke-Expression $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
+$Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
 # install autohotkey
 #winget install -e -h Autohotkey.Autohotkey
-Invoke-Expression $WebClient=New-Object Net.WebClient
-Invoke-Expression $Uri='https://raw.githubusercontent.com/chubbyhippo/windows/main/CapsToChangeInputLanguage.ahk'
-Invoke-Expression $WebClient.DownloadFile($Uri, "$Home\CapsToChangeInputLanguage.ahk")
-Invoke-Expression $WshShell = New-Object -comObject WScript.Shell
-Invoke-Expression $Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.lnk")
-Invoke-Expression $Shortcut.TargetPath = "$Home\CapsToChangeInputLanguage.ahk"
-Invoke-Expression $Shortcut.Save()
+$WebClient=New-Object Net.WebClient
+$Uri='https://raw.githubusercontent.com/chubbyhippo/windows/main/CapsToChangeInputLanguage.ahk'
+$WebClient.DownloadFile($Uri, "$Home\CapsToChangeInputLanguage.ahk")
+$WshShell = New-Object -comObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.lnk")
+$Shortcut.TargetPath = "$Home\CapsToChangeInputLanguage.ahk"
+$Shortcut.Save()
 
 # debloat
 Invoke-Expression git clone https://github.com/Raphire/Win11Debloat.git
