@@ -1,18 +1,18 @@
 # Check to see if we are currently running "as Administrator"
-if (!([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {  
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {  
     # We are not running "as Administrator" - so relaunch as administrator
 
     # Create a new process object that starts PowerShell
-    $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
+    $newProcess = New-Object System.Diagnostics.ProcessStartInfo "PowerShell"
 
-    # Specify the current script path and name as a parameter
-    $newProcess.Arguments = "& '" + $script:MyInvocation.MyCommand.Path + "'"
+    # Specify the current script path and name as a parameter with ExecutionPolicy Bypass and NoProfile
+    $newProcess.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"" + $script:MyInvocation.MyCommand.Definition + `""
 
     # Indicate that the process should be elevated
-    $newProcess.Verb = "runas";
+    $newProcess.Verb = "runas"
 
     # Start the new process
-    [System.Diagnostics.Process]::Start($newProcess);
+    [System.Diagnostics.Process]::Start($newProcess)
 
     # Exit from the current, unelevated, process
     exit
