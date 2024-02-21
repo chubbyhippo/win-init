@@ -1,3 +1,23 @@
+# Check to see if we are currently running "as Administrator"
+if (!([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {  
+    # We are not running "as Administrator" - so relaunch as administrator
+
+    # Create a new process object that starts PowerShell
+    $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
+
+    # Specify the current script path and name as a parameter
+    $newProcess.Arguments = "& '" + $script:MyInvocation.MyCommand.Path + "'"
+
+    # Indicate that the process should be elevated
+    $newProcess.Verb = "runas";
+
+    # Start the new process
+    [System.Diagnostics.Process]::Start($newProcess);
+
+    # Exit from the current, unelevated, process
+    exit
+}
+
 Set-WinUserLanguageList en-US,th-TH -Force
 Install-PackageProvider -Name NuGet -Force
 # install git
