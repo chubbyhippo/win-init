@@ -12,11 +12,12 @@ choco install googlechrome -y
 choco install insomnia-rest-api-client -y
 choco install jetbrainstoolbox -y
 choco install minikube -y
+choco install neovim -y
 choco install nvm -y
 choco install openjdk -y
 choco install python -y
+choco install tor-browser -y
 choco install virtualbox --params "/NoDesktopShortcut" -y
-choco install neovim -y
 choco install vscode -y
 
 # refresh
