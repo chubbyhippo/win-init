@@ -16,7 +16,7 @@ choco install openjdk -y
 choco install python -y
 choco install tor-browser -y
 choco install virtualbox --params "/NoDesktopShortcut" -y
-choco install vscode -y
+choco install vscode --params "/NoDesktopIcon" -y
 
 # refresh
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
