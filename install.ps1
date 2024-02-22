@@ -24,13 +24,9 @@ choco install vscode -y
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
 # install autohotkey
-$WebClient=New-Object Net.WebClient
-$Uri='https://raw.githubusercontent.com/chubbyhippo/windows/main/CapsToChangeInputLanguage.ahk'
-$WebClient.DownloadFile($Uri, "$Home\CapsToChangeInputLanguage.ahk")
-$WshShell = New-Object -comObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.lnk")
-$Shortcut.TargetPath = "$Home\CapsToChangeInputLanguage.ahk"
-$Shortcut.Save()
+$url = "https://raw.githubusercontent.com/chubbyhippo/windows/main/CapsToChangeInputLanguage.ahk"
+$destinationPath = "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.ahk"
+Invoke-WebRequest -Uri $url -OutFile $destinationPath
 
 # debloat
 git clone https://github.com/Raphire/Win11Debloat.git
