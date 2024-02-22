@@ -5,7 +5,6 @@ Install-PackageProvider -Name NuGet -Force
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # install programs
 choco install autohotkey -y
-choco install docker-desktop -y
 choco install git -y
 choco install golang -y
 choco install googlechrome -y
