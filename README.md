@@ -8,6 +8,7 @@ cmd.exe -/c windows-main\windows-main\Run.bat
 rm -fo -r "$Home\downloads\windows-main.zip"
 rm -fo -r "$Home\windows-main"
 ```
+### run as admin
 ```
-irm https://raw.githubusercontent.com/chubbyhippo/windows/main/init.ps1 | iex
+irm https://raw.githubusercontent.com/chubbyhippo/windows/main/install.ps1 | iex
 ```
