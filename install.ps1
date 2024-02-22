@@ -16,7 +16,7 @@ choco install minikube -y
 choco install nvm -y
 choco install openjdk -y
 choco install python -y
-choco install virtualbox -y
+choco install virtualbox --params "/NoDesktopShortcut" -y
 choco install neovim -y
 choco install vscode -y
 
