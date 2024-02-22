@@ -13,6 +13,7 @@ choco install jetbrainstoolbox -y
 choco install neovim -y
 choco install nvm -y
 choco install openjdk -y
+choco install podman-desktop -y
 choco install python -y
 choco install tor-browser -y
 choco install virtualbox --params "/NoDesktopShortcut" -y
