@@ -5,7 +5,21 @@ Install-PackageProvider -Name NuGet -Force
 # install choco
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # install programs
-choco install git autohotkey -y
+choco install autohotkey -y
+choco install docker-desktop -y
+choco install git -y
+choco install golang -y
+choco install googlechrome -y
+choco install insomnia-rest-api-client -y
+choco install jetbrainstoolbox -y
+choco install minikube -y
+choco install nvm -y
+choco install openjdk -y
+choco install python -y
+choco install virtualbox -y
+choco install neovim -y
+choco install vscode -y
+
 # refresh
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
 
