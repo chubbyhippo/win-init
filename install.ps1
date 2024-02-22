@@ -10,7 +10,6 @@ choco install golang -y
 choco install googlechrome -y
 choco install insomnia-rest-api-client -y
 choco install jetbrainstoolbox -y
-choco install minikube -y
 choco install neovim -y
 choco install nvm -y
 choco install openjdk -y
