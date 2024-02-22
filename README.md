@@ -1,3 +1,10 @@
+### Shift + F10
+```
+OOBE\BYPASSNRO
+```
+```
+ipconfig /release
+```
 ### run powershell
 ```
 $WebClient=New-Object Net.WebClient
