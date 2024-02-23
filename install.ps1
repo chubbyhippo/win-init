@@ -31,3 +31,6 @@ Invoke-WebRequest -Uri $url -OutFile $destinationPath
 git clone https://github.com/Raphire/Win11Debloat.git
 Set-ExecutionPolicy Unrestricted -Scope Process -Force; .\Win11Debloat\"Win11Debloat.ps1" -Silent -RunDefaults -RemoveW11Outlook -ClearStart -ShowHiddenFolders
 rm -fo -r Win11Debloat
+
+# ideavim
+Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.ideavimrc/main/install.ps1 | Invoke-Expression
