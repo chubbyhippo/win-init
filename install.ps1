@@ -12,6 +12,7 @@ choco install insomnia-rest-api-client -y
 choco install jetbrainstoolbox -y
 choco install nanazip -y
 choco install neovim -y
+choco install notepadplusplus -y
 choco install nvm -y
 choco install openjdk -y
 choco install podman-desktop -y
