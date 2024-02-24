@@ -9,6 +9,7 @@ choco install cpu-z -y
 choco install git -y
 choco install golang -y
 choco install googlechrome -y
+choco install inkscape -y
 choco install insomnia-rest-api-client -y
 choco install jetbrainstoolbox -y
 choco install nanazip -y
