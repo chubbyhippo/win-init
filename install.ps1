@@ -23,6 +23,7 @@ choco install tor-browser -y
 choco install virtualbox --params "/NoDesktopShortcut" -y
 choco install vlc -y
 choco install vscode --params "/NoDesktopIcon" -y
+choco install winscp -y
 
 # refresh
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine")
