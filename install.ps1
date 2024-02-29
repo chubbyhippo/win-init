@@ -10,6 +10,7 @@ choco install gimp -y
 choco install git -y
 choco install golang -y
 choco install googlechrome -y
+choco install graalvm -y
 choco install inkscape -y
 choco install insomnia-rest-api-client -y
 choco install jetbrainstoolbox -y
