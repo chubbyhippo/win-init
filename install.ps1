@@ -14,7 +14,7 @@ choco install graalvm -y
 choco install inkscape -y
 choco install insomnia-rest-api-client -y
 choco install jetbrainstoolbox -y
-choco install liberica-mission-control -y
+choco install jmc -y
 choco install nanazip -y
 choco install neovim -y
 choco install notepadplusplus -y
