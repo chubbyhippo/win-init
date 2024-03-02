@@ -16,3 +16,6 @@ rm -fo -r Win11Debloat
 
 # ideavim
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.ideavimrc/main/install.ps1 | Invoke-Expression
+
+# vscode setup
+Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/code-settings/main/install.ps1| Invoke-Expression
