@@ -1,6 +1,9 @@
 Set-WinUserLanguageList en-US,th-TH -Force
 Install-PackageProvider -Name NuGet -Force
 
+# install glazewm
+winget install GlazeWM -h --accept-package-agreements --accept-source-agreements
+
 # install choco
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/chocolatey/main/install.ps1 | Invoke-Expression
 
