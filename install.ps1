@@ -22,3 +22,6 @@ Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.ideavimrc/main/
 
 # vscode setup
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/code-settings/main/install.ps1| Invoke-Expression
+
+# allow running unsigned scripts 
+Set-ExecutionPolicy RemoteSigned
