@@ -8,8 +8,8 @@ Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.glaze-wm/main/s
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/chocolatey/main/install.ps1 | Invoke-Expression
 
 # setup autohotkey
-$url = "https://raw.githubusercontent.com/chubbyhippo/windows/main/CapsToChangeInputLanguage.ahk"
-$destinationPath = "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CapsToChangeInputLanguage.ahk"
+$url = "https://raw.githubusercontent.com/chubbyhippo/windows/main/remap.ahk"
+$destinationPath = "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
 Invoke-WebRequest -Uri $url -OutFile $destinationPath
 
 # debloat
