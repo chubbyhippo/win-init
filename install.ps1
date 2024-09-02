@@ -1,9 +1,6 @@
 Set-WinUserLanguageList en-US,th-TH -Force
 Install-PackageProvider -Name NuGet -Force
 
-# install scoop
-Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/scoop/main/install.ps1 | Invoke-Expression
-
 # install glazewm
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.glaze-wm/main/setup.ps1 | Invoke-Expression
 
