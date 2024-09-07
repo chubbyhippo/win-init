@@ -4,9 +4,6 @@ Install-PackageProvider -Name NuGet -Force
 # install glazewm
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.glaze-wm/main/setup.ps1 | Invoke-Expression
 
-# install choco
-Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/chocolatey/main/install.ps1 | Invoke-Expression
-
 # setup autohotkey
 $url = "https://raw.githubusercontent.com/chubbyhippo/windows/main/remap.ahk"
 $destinationPath = "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
