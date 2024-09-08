@@ -20,5 +20,8 @@ Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.ideavimrc/main/
 # vscode setup
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/code-settings/main/install.ps1| Invoke-Expression
 
+# install wsl
+wsl --install
+
 # allow running unsigned scripts 
 Set-ExecutionPolicy RemoteSigned
