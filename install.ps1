@@ -1,7 +1,8 @@
 Set-WinUserLanguageList en-US,th-TH -Force
 Install-PackageProvider -Name NuGet -Force
 
-
+# scoop
+runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -ExpandProperty UserName) "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/scoop/main/install.ps1 | Invoke-Expression\""
 
 # debloat
 git clone https://github.com/Raphire/Win11Debloat.git
