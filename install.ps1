@@ -13,7 +13,7 @@ runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -Exp
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/chubbyhippo/ahk/master/remap.ahk" -OutFile "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
 
 # ideavim
-Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.ideavimrc/main/install.ps1 | Invoke-Expression
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/chubbyhippo/ideavimrc/main/.ideavimrc -OutFile $Home\.ideavimrc
 
 # vscode setup
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/code-settings/main/install.ps1| Invoke-Expression
