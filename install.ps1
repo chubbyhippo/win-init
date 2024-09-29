@@ -10,9 +10,7 @@ rm -fo -r Win11Debloat
 runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -ExpandProperty UserName) "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/scoop/main/install.ps1 | Invoke-Expression\""
 
 # setup autohotkey
-$url = "https://raw.githubusercontent.com/chubbyhippo/windows/main/remap.ahk"
-$destinationPath = "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
-Invoke-WebRequest -Uri $url -OutFile $destinationPath
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/chubbyhippo/ahk/master/remap.ahk" -OutFile "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
 
 # ideavim
 Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/.ideavimrc/main/install.ps1 | Invoke-Expression
