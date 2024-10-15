@@ -10,7 +10,7 @@ rm -fo -r Win11Debloat
 runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -ExpandProperty UserName) "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/winget/refs/heads/main/install.ps1 | Invoke-Expression\""
 
 # scoop
-runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -ExpandProperty UserName) "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/scoop/main/install.ps1 | Invoke-Expression\""
+runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -ExpandProperty UserName) "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"Invoke-RestMethod https://raw.githubusercontent.com/chubbyhippo/scoop/refs/heads/main/install.ps1 | Invoke-Expression\""
 
 # setup autohotkey
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/chubbyhippo/ahk/master/remap.ahk" -OutFile "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
