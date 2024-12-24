@@ -1,11 +1,11 @@
 ### Shift + F10
-```
+```sh
 OOBE\BYPASSNRO
 ```
-```
+```sh
 ipconfig /release
 ```
 ### run powershell as admin
-```
+```powershell
 irm https://raw.githubusercontent.com/chubbyhippo/win-init/refs/heads/main/install.ps1 | iex
 ```
