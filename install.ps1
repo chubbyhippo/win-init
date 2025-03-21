@@ -14,6 +14,7 @@ runas.exe /user:$(Get-WmiObject -Class Win32_ComputerSystem | Select-Object -Exp
 
 # setup autohotkey
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/chubbyhippo/ahk/master/remap.ahk" -OutFile "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\remap.ahk"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/chubbyhippo/ahk/master/xcape.ahk" -OutFile "$Home\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\xcape.ahk"
 
 # ideavim
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/chubbyhippo/ideavimrc/main/.ideavimrc -OutFile $Home\.ideavimrc
